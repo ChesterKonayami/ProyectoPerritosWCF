@@ -1,4 +1,8 @@
-﻿using System;
+﻿// SEMANA 7
+// JOSEPH MAURICIO MONDRAGON MORENO
+// SISTEMAS COMPUTACIONALES 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,12 +14,12 @@ namespace ProyectoPerritosWCF.Data
     {
         // Cadena de conexión al servidor MySQL
         private string cadenaConexion =
-            "Server=;" +
-            "Port=;" +
-            "Database=;" +
-            "Uid=;" +
-            "Pwd=;";
-
+        "Server=;" +
+        "Port=;" +
+        "Database=;" +
+        "Uid=;" +
+        "Pwd=";
+         
         // Método que devuelve una conexión
         public MySqlConnection ObtenerConexion()
         {
@@ -45,16 +49,16 @@ namespace ProyectoPerritosWCF.Data
             string nombreUsuario,
             string password)
         {
-            /*
-             * IMPLEMENTACIÓN REAL
-             * (Pendiente de restablecer la conexión con MySQL)
-             *
+
+            //Consulta con la tabla TBL_LOGIN_JMMM para validar el usuario y contraseña
+           
+          
 
             string consulta =
                 "SELECT COUNT(*) " +
                 "FROM TBL_LOGIN_JMMM " +
-                "WHERE NombreUsuario = @usuario " +
-                "AND Password = @password";
+                "WHERE USUARIO = @usuario " +
+                "AND PASSWORD = @password";
 
             using (MySqlConnection conexion = ObtenerConexion())
             {
@@ -79,11 +83,11 @@ namespace ProyectoPerritosWCF.Data
 
                 return cantidad > 0;
             }
-            */
+            
 
             // Valor temporal mientras el servidor
             // no esté disponible.
-            return false;
+            //return false;
         }
     }
 }

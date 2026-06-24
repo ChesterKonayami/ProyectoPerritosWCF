@@ -1,16 +1,23 @@
-﻿@model ProyectoPerritosWCF.Models.Usuario
+﻿<!--SEMANA 7
+JOSEPH MAURICIO MONDRAGON MORENO
+SISTEMAS COMPUTACIONALES-->
+
+
+@model ProyectoPerritosWCF.Models.Usuario
 
 @{
     ViewBag.Title = "Login";
 }
 
 <!-- Título principal del sistema -->
+
 <div class="text-center mb-4">
     <h1>Sistema de Consulta de Perritos</h1>
     <p>Consumo de la API pública Dog CEO</p>
 </div>
 
 <!-- Contenedor principal -->
+
 <div class="row justify-content-center">
 
     <!-- Tarjeta del Login -->
@@ -64,6 +71,14 @@
                             })
 
                     </div>
+
+                    <!-- Mensaje de error -->
+                    if (ViewBag.MensajeError != null)
+                    {
+                        <div class="alert alert-danger text-center">
+                            @ViewBag.MensajeError
+                        </div>
+                    }
 
                     <!-- Botón de acceso -->
                     <div class="text-center">

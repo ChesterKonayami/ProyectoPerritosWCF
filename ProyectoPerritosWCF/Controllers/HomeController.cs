@@ -24,7 +24,16 @@ namespace ProyectoPerritosWCF.Controllers
         [HttpPost]
         public ActionResult Index(Usuario usuario)
         {
-            /*
+            // Validar campos vacíos
+            if (string.IsNullOrWhiteSpace(usuario.NombreUsuario) ||
+                string.IsNullOrWhiteSpace(usuario.Password))
+            {
+                ViewBag.MensajeError =
+                    "Debe ingresar usuario y contraseña.";
+
+                return View();
+            }
+
             ConexionBD conexion = new ConexionBD();
 
             bool usuarioValido =
@@ -41,10 +50,11 @@ namespace ProyectoPerritosWCF.Controllers
                 "Usuario o contraseña incorrectos.";
 
             return View();
-            */
+        
+            
 
             // IMPLEMENTACIÓN TEMPORAL
-            return RedirectToAction("Perritos");
+            //return RedirectToAction("Perritos");
         }
 
         /// Vista de documentación del proyecto.
